@@ -66,7 +66,7 @@ export default function ContactForm() {
           });
           setLoading(false);
         },
-        (error) => {
+        () => {
           // console.log("FAILED...", error.text);
           toast.error("Message sending failed", {
             description:
