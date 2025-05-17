@@ -21,7 +21,7 @@ export default function Intro() {
             {/* Heading and supporting text */}
             <div className="grid gap-6 md:gap-10">
               {/* Heading */}
-              <h1 className="text-5xl leading-10 font-semibold md:text-7xl">
+              <h1 className="text-5xl leading-10 font-semibold md:text-7xl md:leading-[1.15]">
                 Amazing Apps, Clean Code.
               </h1>
               {/* Supporting text */}
