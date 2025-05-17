@@ -29,9 +29,17 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
 
   const formSchema = z.object({
-    user_name: z.string().min(5).max(50),
-    user_email: z.string().email(),
-    user_message: z.string().min(5).max(500),
+    user_name: z
+      .string()
+      .min(5, { message: "Name must be at least 5 characters long." })
+      .max(50, { message: "Name must be at most 50 characters long." }),
+    user_email: z
+      .string()
+      .email({ message: "Please enter a valid email address." }),
+    user_message: z
+      .string()
+      .min(5, { message: "Message must be at least 5 characters long." })
+      .max(500, { message: "Message must be at most 500 characters long." }),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -50,13 +58,8 @@ export default function ContactForm() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          // console.log("SUCCESS!");
           form.reset();
-          //   toast({
-          //     title: "Message sent",
-          //     description:
-          //       "Thank you! I will reach out to you within the next 24 hours.",
-          //   });
           toast.success("Message sent", {
             description:
               "Thank you! I will reach out to you within the next 24 hours.",
@@ -64,12 +67,7 @@ export default function ContactForm() {
           setLoading(false);
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          //   toast({
-          //     title: "Message sending failed",
-          //     description:
-          //       "Sorry, an error occurred while sending your message. Please try again later.",
-          //   });
+          // console.log("FAILED...", error.text);
           toast.error("Message sending failed", {
             description:
               "Sorry, an error occurred while sending your message. Please try again later.",
@@ -139,7 +137,7 @@ export default function ContactForm() {
               Please wait
             </Button>
           ) : (
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full cursor-pointer">
               <p>Send Message</p>
             </Button>
           )}
