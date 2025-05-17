@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+This portfolio is a fully responsive website consisting of four sections on a single page: Home, Projects, Skills, and Contact.
 
-First, run the development server:
+## About the Portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This website serves as a digital storefront to showcase my work, skills, and contact information.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Home
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The home section welcomes visitors and provides an initial glimpse into my personality and work.
 
-## Learn More
+### Projects
 
-To learn more about Next.js, take a look at the following resources:
+Here you'll find a selection of my projects. Each project is briefly introduced and linked to further details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Skills
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This section lists my skills and expertise relevant to my role as a developer.
 
-## Deploy on Vercel
+### Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you'd like to get in touch, you'll find my contact information here. Feel free to reach out regarding professional matters or potential projects.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Technologies
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/UI](https://ui.shadcn.com/)
+
+## Note
+
+The contact form is integrated with emailjs, eliminating the need for backend infrastructure.
