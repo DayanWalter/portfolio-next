@@ -1,3 +1,4 @@
+"use client";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -40,24 +41,36 @@ export default function Intro() {
               </p>
               {/* Links */}
               <div className="flex gap-3">
-                <Button size="icon" role="button" aria-label="github button">
-                  <a target="_blank" href={githubLink} aria-label="github link">
-                    <Github />
-                  </a>
+                <Button
+                  size="icon"
+                  role="button"
+                  aria-label="github button"
+                  className="cursor-pointer"
+                  onClick={() =>
+                    window.open(githubLink, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <Github />
                 </Button>
-                <Button size="icon" role="button" aria-label="linkedIn button">
-                  <a
-                    target="_blank"
-                    href={linkedinLink}
-                    aria-label="linkedin link"
-                  >
-                    <Linkedin />
-                  </a>
+                <Button
+                  size="icon"
+                  role="button"
+                  aria-label="linkedIn button"
+                  className="cursor-pointer"
+                  onClick={() =>
+                    window.open(linkedinLink, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <Linkedin />
                 </Button>
-                <Button size="icon" role="button" aria-label="email button">
-                  <a href={`mailto:${email}`} aria-label="email link">
-                    <Mail />
-                  </a>
+                <Button
+                  size="icon"
+                  role="button"
+                  aria-label="email button"
+                  className="cursor-pointer"
+                  onClick={() => window.open(`mailto:${email}`, "_blank")}
+                >
+                  <Mail />
                 </Button>
               </div>
             </div>
