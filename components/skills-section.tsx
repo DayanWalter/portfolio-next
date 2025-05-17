@@ -1,5 +1,5 @@
 import { SKILLS } from "./constants";
-
+import Image from "next/image";
 export default function Skills() {
   return (
     <>
@@ -39,7 +39,9 @@ export default function Skills() {
                           target="_blank"
                           aria-label={"Link to " + skill.name + " docs"}
                         >
-                          <img
+                          <Image
+                            width={40}
+                            height={40}
                             className="h-10 w-10 hover:scale-110"
                             src={skill.svg}
                             alt={skill.name + " image"}
@@ -68,7 +70,9 @@ export default function Skills() {
                           target="_blank"
                           aria-label={"Link to " + skill.name + " docs"}
                         >
-                          <img
+                          <Image
+                            width={40}
+                            height={40}
                             className="h-10 w-10 hover:scale-110"
                             src={skill.svg}
                             alt={skill.name + " image"}
@@ -97,7 +101,9 @@ export default function Skills() {
                           target="_blank"
                           aria-label={"Link to " + skill.name + " docs"}
                         >
-                          <img
+                          <Image
+                            width={40}
+                            height={40}
                             className="h-10 w-10 hover:scale-110"
                             src={skill.svg}
                             alt={skill.name + " image"}
@@ -126,7 +132,9 @@ export default function Skills() {
                           target="_blank"
                           aria-label={"Link to " + skill.name + " docs"}
                         >
-                          <img
+                          <Image
+                            width={40}
+                            height={40}
                             className="h-10 w-10 hover:scale-110"
                             src={skill.svg}
                             alt={skill.name + " image"}
