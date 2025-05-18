@@ -1,11 +1,29 @@
-"use client";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Intro() {
   const githubLink = "https://github.com/dayanwalter";
   const linkedinLink = "https://www.linkedin.com/in/dayanwalter/";
   const email = "dayanwalter@gmail.com";
+
+  const socialLinks = [
+    {
+      href: githubLink,
+      label: "github button",
+      icon: <Github />,
+    },
+    {
+      href: linkedinLink,
+      label: "linkedIn button",
+      icon: <Linkedin />,
+    },
+    {
+      href: `mailto:${email}`,
+      label: "email button",
+      icon: <Mail />,
+    },
+  ];
 
   return (
     <>
@@ -41,37 +59,20 @@ export default function Intro() {
               </p>
               {/* Links */}
               <div className="flex gap-3">
-                <Button
-                  size="icon"
-                  role="button"
-                  aria-label="github button"
-                  className="cursor-pointer"
-                  onClick={() =>
-                    window.open(githubLink, "_blank", "noopener,noreferrer")
-                  }
-                >
-                  <Github />
-                </Button>
-                <Button
-                  size="icon"
-                  role="button"
-                  aria-label="linkedIn button"
-                  className="cursor-pointer"
-                  onClick={() =>
-                    window.open(linkedinLink, "_blank", "noopener,noreferrer")
-                  }
-                >
-                  <Linkedin />
-                </Button>
-                <Button
-                  size="icon"
-                  role="button"
-                  aria-label="email button"
-                  className="cursor-pointer"
-                  onClick={() => window.open(`mailto:${email}`, "_blank")}
-                >
-                  <Mail />
-                </Button>
+                {socialLinks.map(({ href, label, icon }) => (
+                  <Button
+                    asChild
+                    size="icon"
+                    role="button"
+                    aria-label={label}
+                    className="cursor-pointer"
+                    key={label}
+                  >
+                    <Link href={href} target="_blank" rel="noopener noreferrer">
+                      {icon}
+                    </Link>
+                  </Button>
+                ))}
               </div>
             </div>
           </div>
