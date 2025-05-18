@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { PROJECTS } from "./constants";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -24,7 +25,7 @@ export default function Projects() {
                 key={project?.id}
                 className="flex flex-col gap-5 md:flex-row md:gap-10"
               >
-                <a
+                <Link
                   aria-label={`Link to ${project?.title}`}
                   target="_blank"
                   href={project?.websiteLink}
@@ -38,15 +39,18 @@ export default function Projects() {
                     <source src={project?.video} type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
-                </a>
+                </Link>
 
                 {/* Heading and text */}
                 <div className="flex flex-col gap-5">
                   {/* Heading and tech */}
                   <div className="">
-                    <a href={project?.websiteLink} aria-label="link to website">
+                    <Link
+                      href={project?.websiteLink}
+                      aria-label="link to website"
+                    >
                       <p className="text-xl font-semibold">{project?.title}</p>
-                    </a>
+                    </Link>
 
                     {/* Tech */}
                     <p className="text-sm italic">{project?.tech}</p>
@@ -58,22 +62,22 @@ export default function Projects() {
                   {/* Links */}
                   <div className="flex gap-5">
                     <Button size="sm">
-                      <a
+                      <Link
                         href={project?.codeLink}
                         aria-label="Link to code"
                         target="_blank"
                       >
                         View Code
-                      </a>
+                      </Link>
                     </Button>
                     <Button size="sm">
-                      <a
+                      <Link
                         href={project?.websiteLink}
                         aria-label="Link to website"
                         target="_blank"
                       >
                         Visit website
-                      </a>
+                      </Link>
                     </Button>
                   </div>
                 </div>

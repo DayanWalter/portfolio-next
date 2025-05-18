@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SKILLS } from "./constants";
 import Image from "next/image";
 
@@ -34,7 +35,7 @@ export default function Skills() {
                   )?.skills.map((skill) => {
                     return (
                       <li key={skill.id}>
-                        <a
+                        <Link
                           className="flex flex-col items-center gap-2 hover:cursor-pointer"
                           href={skill.website}
                           target="_blank"
@@ -48,7 +49,7 @@ export default function Skills() {
                             alt={skill.name + " image"}
                           />
                           <span className="">{skill.name}</span>
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -65,7 +66,7 @@ export default function Skills() {
                   )?.skills.map((skill) => {
                     return (
                       <li key={skill.id}>
-                        <a
+                        <Link
                           className="flex flex-col items-center gap-2 hover:cursor-pointer"
                           href={skill.website}
                           target="_blank"
@@ -79,7 +80,7 @@ export default function Skills() {
                             alt={skill.name + " image"}
                           />
                           <span className="">{skill.name}</span>
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -96,7 +97,7 @@ export default function Skills() {
                   )?.skills.map((skill) => {
                     return (
                       <li key={skill.id}>
-                        <a
+                        <Link
                           className="flex flex-col items-center gap-2 hover:cursor-pointer"
                           href={skill.website}
                           target="_blank"
@@ -110,7 +111,7 @@ export default function Skills() {
                             alt={skill.name + " image"}
                           />
                           <span className="">{skill.name}</span>
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -127,7 +128,7 @@ export default function Skills() {
                   )?.skills.map((skill) => {
                     return (
                       <li key={skill.id}>
-                        <a
+                        <Link
                           className="flex flex-col items-center gap-2 hover:cursor-pointer"
                           href={skill.website}
                           target="_blank"
@@ -141,7 +142,7 @@ export default function Skills() {
                             alt={skill.name + " image"}
                           />
                           <span className="">{skill.name}</span>
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}

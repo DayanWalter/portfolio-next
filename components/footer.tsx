@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     // Container
@@ -5,7 +7,7 @@ export default function Footer() {
       {/* Content */}
       <div className="border-t p-4 md:max-w-7xl">
         <p className="text-center">
-          <a
+          <Link
             href="https://opensource.org/license/mit"
             target="_blank"
             className=""
@@ -13,7 +15,7 @@ export default function Footer() {
             {" "}
             &copy; {new Date().getFullYear()} Dayan Walter - This project is
             licensed under the MIT License.
-          </a>
+          </Link>
         </p>
       </div>
     </footer>

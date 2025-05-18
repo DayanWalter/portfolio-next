@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ContactForm from "./contact-form";
 
 export default function Contact() {
@@ -14,19 +15,20 @@ export default function Contact() {
             <p className="">
               To get in touch with me, simply fill out the form below.
               Alternatively, you can also reach me via{" "}
-              <a
+              <Link
                 className="text-primary underline underline-offset-4"
                 href="https://www.linkedin.com/in/dayanwalter/"
+                target="_blank"
               >
                 LinkedIn
-              </a>{" "}
+              </Link>{" "}
               or{" "}
-              <a
+              <Link
                 className="text-primary underline underline-offset-4"
                 href="mailto:dayanwalter@gmail.com"
               >
                 email
-              </a>
+              </Link>
               .
             </p>
           </div>

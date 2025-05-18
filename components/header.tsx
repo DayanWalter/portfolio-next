@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 
@@ -9,33 +10,33 @@ export default function Header() {
     >
       <div className="flex h-full w-full items-center px-4 md:justify-between md:px-8">
         {/* Logo */}
-        <a href="#" className="text-primary hidden text-2xl md:block">
+        <Link href="#" className="text-primary hidden text-2xl md:block">
           {" "}
           {"<DW/>"}{" "}
-        </a>
+        </Link>
 
         {/* Menu */}
         <div id="mainmenu" className="w-full md:w-3/4">
           <nav role="navigation" className="text-primary flex justify-between">
             <Button variant="link" role="button">
-              <a href="#" role="link">
+              <Link href="#" role="link">
                 Home
-              </a>
+              </Link>
             </Button>
             <Button variant="link" role="button">
-              <a href="#projects" role="link">
+              <Link href="#projects" role="link">
                 Projects
-              </a>
+              </Link>
             </Button>
             <Button variant="link" role="button">
-              <a href="#skills" role="link">
+              <Link href="#skills" role="link">
                 Skills
-              </a>
+              </Link>
             </Button>
             <Button variant="link" role="button">
-              <a href="#contact" role="link">
+              <Link href="#contact" role="link">
                 Contact
-              </a>
+              </Link>
             </Button>
             {/* Themetoggle */}
             <ModeToggle />
