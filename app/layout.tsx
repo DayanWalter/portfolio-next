@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "Dayan Walter – Freelance Software Developer",
 	description:
-		"Dayan Walter, freelance software developer specializing in Next.js, React.js, TypeScript, Tailwind CSS,and PostgreSQL. Hire me for custom, scalable web solutions.",
+		"Dayan Walter, freelance software developer specializing in Next.js, React.js, TypeScript, Tailwind CSS and PostgreSQL. Hire me for custom, scalable web solutions.",
 	keywords: [
 		"freelance react developer",
 		"freelance nextjs developer",
@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 		"reactjs developer",
 		"nextjs developer",
 		"postgresql",
+		"rest api",
 		"graphql",
 		"docker",
 		"tailwind developer",
